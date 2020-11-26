@@ -5,6 +5,9 @@
  */
 package ScrabbleScorer;
 
+import java.util.Scanner;
+import models.Scrabble;
+
 /**
  *
  * @author KMAKAMU
@@ -15,7 +18,12 @@ public class Main {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        Scanner scrabbleInput = new Scanner(System.in);
+        System.out.println("Please enter a word to play scrabble");
+        String  input = scrabbleInput.next();
+        Scrabble playScrabble = new Scrabble();
+        Integer scrabbleScore   = playScrabble.calculateScore(input);
+        System.out.println("The Scrabble Score for the word "+input+" is "+scrabbleScore);
     }
     
 }

@@ -78,7 +78,7 @@ public class ScrabbleTest {
     @Test
      public void calculateScore_returnScoreForAMultipleLetterFromAnyCategory_Integer(){
         Scrabble testScrabble = new Scrabble();
-        String word                    = "zwetryqweryty";
+        String word                    = "qwe";
         char [] letters                 = word.toUpperCase().toCharArray();
         Integer expected          = 0;
         for(int x=0; x<letters.length; x++){

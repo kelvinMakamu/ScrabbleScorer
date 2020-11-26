@@ -47,7 +47,7 @@ public class Scrabble {
     }
      
     public Integer calculateScore(String word){
-        char[] letters = word.toUpperCase().toCharArray();
+        char[] letters   = word.toUpperCase().toCharArray();
         Integer result = 0;
         for(int i=0; i<letters.length;i++){
             if(this.mapScores.containsKey(letters[i])){
