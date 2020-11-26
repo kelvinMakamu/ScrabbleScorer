@@ -14,20 +14,10 @@ import java.util.Map;
  */
 public class Scrabble {
     
-    public Integer calculateScore(String word){
-        char[] letters = word.toUpperCase().toCharArray();
-        Map<Character,Integer> mapScores = scoringMapping();
-        Integer result = 0;
-        for(int i=0; i<letters.length;i++){
-            if(mapScores.containsKey(letters[i])){
-                result += mapScores.get(letters[i]);
-            }
-        }
-        return result;
-    }
+    Map<Character,Integer> mapScores;
     
-    public Map<Character,Integer> scoringMapping (){
-        Map<Character,Integer> mapScores = new LinkedHashMap<>();
+     public Scrabble() {
+        this.mapScores = new LinkedHashMap<>();
         mapScores.put('A',1);
         mapScores.put('E',1);
         mapScores.put('I',1);
@@ -54,6 +44,17 @@ public class Scrabble {
         mapScores.put('X',8);
         mapScores.put('Q',10);
         mapScores.put('Z',10);
-        return mapScores;
     }
+     
+    public Integer calculateScore(String word){
+        char[] letters = word.toUpperCase().toCharArray();
+        Integer result = 0;
+        for(int i=0; i<letters.length;i++){
+            if(this.mapScores.containsKey(letters[i])){
+                result += this. mapScores.get(letters[i]);
+            }
+        }
+        return result;
+    }
+
 }
