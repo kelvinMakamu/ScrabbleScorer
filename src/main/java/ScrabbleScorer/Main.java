@@ -22,7 +22,7 @@ public class Main {
         System.out.println("Please enter a word to play scrabble");
         String  input = scrabbleInput.next();
         Scrabble playScrabble = new Scrabble();
-        Integer scrabbleScore   = playScrabble.calculateScore(input);
+        Integer scrabbleScore = playScrabble.calculateScore(input);
         System.out.println("The Scrabble Score for the word "+input+" is "+scrabbleScore);
     }
     

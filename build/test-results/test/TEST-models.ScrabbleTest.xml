@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="models.ScrabbleTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2020-11-26T20:49:52" hostname="LTTECH1216" time="0.01">
+  <properties/>
+  <testcase name="calculateScore_returnScoreForASingleLetter_Integer" classname="models.ScrabbleTest" time="0.007"/>
+  <testcase name="calculateScore_returnScoreForASingleLetterFromAnyCategory_Integer" classname="models.ScrabbleTest" time="0.001"/>
+  <testcase name="calculateScore_returnScoreForTwoLetter_Integer" classname="models.ScrabbleTest" time="0.0"/>
+  <testcase name="calculateScore_returnScoreForAMultipleLetterFromAnyCategory_Integer" classname="models.ScrabbleTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
