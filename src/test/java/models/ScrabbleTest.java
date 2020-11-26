@@ -16,30 +16,10 @@ import static org.junit.Assert.*;
  */
 public class ScrabbleTest {
     
+    Map<Character,Integer> mapScores;
+    
     public ScrabbleTest() {
-    }
-    
-    @Test
-    public void calculateScore_returnScoreForASingleLetter_Integer(){
-        Scrabble testScrabble = new Scrabble();
-        Integer expected = 1;
-        assertEquals(expected, testScrabble.calculateScore("a"));
-    }
-    
-    @Test
-    public void calculateScore_returnScoreForTwoLetter_Integer(){
-        Scrabble testScrabble = new Scrabble();
-        Integer expected  = 2;
-        assertEquals(expected, testScrabble.calculateScore("ae"));
-    }
-    
-    @Test
-    public void calculateScore_retturnScoreForASingleLetterFromAnyCategory_Integer(){
-        Scrabble testScrabble = new Scrabble();
-        String word = "z";
-        char [] letters = word.toUpperCase().toCharArray();
-        char character = letters[0];
-        Map<Character,Integer> mapScores = new LinkedHashMap<>();
+        this.mapScores = new LinkedHashMap<>();
         mapScores.put('A',1);
         mapScores.put('E',1);
         mapScores.put('I',1);
@@ -66,9 +46,31 @@ public class ScrabbleTest {
         mapScores.put('X',8);
         mapScores.put('Q',10);
         mapScores.put('Z',10);
-        Integer expected = 0;
-        if(mapScores.containsKey(character)){
-            expected +=mapScores.get(character);
+    }
+    
+    @Test
+    public void calculateScore_returnScoreForASingleLetter_Integer(){
+        Scrabble testScrabble = new Scrabble();
+        Integer expected = 1;
+        assertEquals(expected, testScrabble.calculateScore("a"));
+    }
+    
+    @Test
+    public void calculateScore_returnScoreForTwoLetter_Integer(){
+        Scrabble testScrabble = new Scrabble();
+        Integer expected  = 2;
+        assertEquals(expected, testScrabble.calculateScore("ae"));
+    }
+    
+    @Test
+    public void calculateScore_returnScoreForASingleLetterFromAnyCategory_Integer(){
+        Scrabble testScrabble = new Scrabble();
+        String word                    = "z";
+        char [] letters                 = word.toUpperCase().toCharArray();
+        char character               = letters[0];
+        Integer expected          = 0;
+        if(this.mapScores.containsKey(character)){
+            expected =this.mapScores.get(character);
         }
         assertEquals(expected,testScrabble.calculateScore(word));
     }
