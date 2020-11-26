@@ -70,11 +70,24 @@ public class ScrabbleTest {
         char character               = letters[0];
         Integer expected          = 0;
         if(this.mapScores.containsKey(character)){
-            expected =this.mapScores.get(character);
+            expected = this.mapScores.get(character);
         }
         assertEquals(expected,testScrabble.calculateScore(word));
     }
-    
-    
+     
+    @Test
+     public void calculateScore_returnScoreForAMultipleLetterFromAnyCategory_Integer(){
+        Scrabble testScrabble = new Scrabble();
+        String word                    = "zwetryqweryty";
+        char [] letters                 = word.toUpperCase().toCharArray();
+        Integer expected          = 0;
+        for(int x=0; x<letters.length; x++){
+            if(this.mapScores.containsKey(letters[x])){
+                expected += this.mapScores.get(letters[x]);
+            }
+        }
+        assertEquals(expected,testScrabble.calculateScore(word));
+    }
+
     
 }
