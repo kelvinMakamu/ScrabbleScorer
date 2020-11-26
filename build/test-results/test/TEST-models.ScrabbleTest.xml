@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="models.ScrabbleTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-11-26T18:19:44" hostname="LTTECH1216" time="0.003">
+  <properties/>
+  <testcase name="calculateScore_returnScoreForASingleLetter_Integer" classname="models.ScrabbleTest" time="0.003"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
